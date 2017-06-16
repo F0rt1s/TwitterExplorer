@@ -1,0 +1,19 @@
+<form class="test-form" #f="ngForm" (ngSubmit)="onSumbit()">
+  <md-input-container class="fullwidth example-margin">
+    <input mdInput placeholder="Number of items to query" name="tbCountItems" [(ngModel)]="dataprovider.pageSize">
+  </md-input-container>
+
+  <md-slide-toggle class="example-margin" [(ngModel)]="dataprovider.IncludeDiagnosis" ngControl="toggleDx" name="dx" >
+    include diagnoses (Dx)
+  </md-slide-toggle>
+  <md-slide-toggle class="example-margin" [(ngModel)]="dataprovider.IncludeMeds" ngControl="toggleRx" name="rx" >
+    include meds (Rx)
+  </md-slide-toggle>
+  <md-slide-toggle class="example-margin" [(ngModel)]="dataprovider.removeOther" ngControl="toggleOther" name="Other" >
+    Reduce 'Other'
+  </md-slide-toggle>
+  <div layout="row" layout-align="center center">
+    <button md-raised-button color="primary" class="example-margin" type="submit" [disabled]="!f.form.valid">Update</button>
+  </div>
+
+</form>

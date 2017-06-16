@@ -1,0 +1,40 @@
+<td-layout-nav class="white" logo="{{appconfig.AppIcon}}">
+    <div td-toolbar-content layout="row" layout-align="center center" flex>
+        <span>{{appconfig.AppName}}</span>
+        <span flex></span>
+        <a md-icon-button mdTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank">
+            <md-icon>chrome_reader_mode</md-icon>
+        </a>
+        <a md-icon-button mdTooltip="Github" href="https://github.com/teradata/covalent" target="_blank">
+            <md-icon svgIcon="assets:github"></md-icon>
+        </a>
+    </div>
+    <div class="inset" flex>
+      <div layout-gt-xs="row" layout-wrap>
+       <div flex-gt-xs="50">
+        <md-card>
+          <md-card-title>Maptest</md-card-title>
+          <md-card-subtitle>Simple Leeflet map</md-card-subtitle>
+          <md-divider></md-divider>
+          <div style="height:290px;overflow:hidden;" class="pad-top-sm">
+            <!--<ngx-charts-area-chart-stacked
+              [scheme]="colorScheme"
+              [results]="multi"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel">
+            </ngx-charts-area-chart-stacked>-->
+          </div>
+        </md-card>
+      </div>
+      </div>
+    </div>
+  <td-layout-footer>
+    Optional footer
+  </td-layout-footer>
+</td-layout-nav>
