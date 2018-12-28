@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataproviderService } from '../../services/dataprovider.service';
 import { GridOptions } from 'ag-grid/main';
 
 @Component({
@@ -9,7 +8,7 @@ import { GridOptions } from 'ag-grid/main';
 })
 export class GridComponent implements OnInit {
 public gridOptions: GridOptions;
-  constructor(public dataprovider: DataproviderService) {
+  constructor() {
     this.gridOptions = {};
     this.gridOptions.enableSorting = true;
     this.gridOptions.enableColResize = true;

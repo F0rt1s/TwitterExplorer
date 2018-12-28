@@ -1,7 +1,5 @@
 import { AppconfigService } from 'app/services/appconfig.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DataproviderService } from 'app/services/dataprovider.service';
-
 
 @Component({
   selector: 'app-chordaloptions',
@@ -11,7 +9,7 @@ import { DataproviderService } from 'app/services/dataprovider.service';
 export class ChordaloptionsComponent implements OnInit {
 
   @ViewChild('f') form;
-  constructor(public appservice: AppconfigService, public dataprovider: DataproviderService) { }
+  constructor(public appservice: AppconfigService) { }
 
   ngOnInit() {
     // this.form.valueChanges.subscribe(data => console.log('Form changes', data));
@@ -21,6 +19,5 @@ export class ChordaloptionsComponent implements OnInit {
   }
 
   public onSumbit() {
-    this.dataprovider.GetItemlist().subscribe();
   }
 }

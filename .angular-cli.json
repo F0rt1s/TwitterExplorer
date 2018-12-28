@@ -23,10 +23,14 @@
         "styles.scss",
         "../node_modules/@covalent/core/common/platform.scss",
         "../node_modules/ag-grid/dist/styles/ag-grid.css",
-        "../node_modules/ag-grid/dist/styles/theme-fresh.css"
+        "../node_modules/ag-grid/dist/styles/theme-fresh.css",
+        "../node_modules/leaflet/dist/leaflet.css",
+        "../node_modules/mapbox-gl/dist/mapbox-gl.css"
       ],
       "scripts": [
-      ],
+        "../node_modules/leaflet/dist/leaflet.js",
+        "../node_modules/mapbox-gl/dist/mapbox-gl.js",
+        "scripts/leaflet-mapbox-gl.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "source": "environments/environment.ts",

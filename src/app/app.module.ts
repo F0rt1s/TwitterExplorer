@@ -21,16 +21,19 @@ import { StartupComponent } from './components/startup/startup.component';
 import { AppconfigService } from './services/appconfig.service';
 import { MaptestComponent } from './components/maptest/maptest.component';
 import { FormtestComponent } from './components/formtest/formtest.component';
-import { ChordalComponent } from './components/chordal/chordal.component';
+import 'leaflet';
+import {} from 'leaflet.vectorgrid/dist/Leaflet.VectorGrid.bundled';
+
 
 // D3
 import { D3Service } from 'd3-ng2-service';
 import { ChordaloptionsComponent } from './components/chordaloptions/chordaloptions.component';
-import { DataproviderService } from 'app/services/dataprovider.service';
+
 import { GridComponent } from './components/grid/grid.component';
 
 // AG Grid
 import {AgGridModule} from 'ag-grid-angular/main';
+import { MapService } from './services/map.service';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent, children: [{component: StartupComponent, path: ''}]},
@@ -44,7 +47,6 @@ const appRoutes: Routes = [
     StartupComponent,
     MaptestComponent,
     FormtestComponent,
-    ChordalComponent,
     ChordaloptionsComponent,
     GridComponent
   ],
@@ -66,7 +68,7 @@ const appRoutes: Routes = [
     CovalentMarkdownModule,
     CovalentDynamicFormsModule,
   ],
-  providers: [AppconfigService, D3Service, DataproviderService],
+  providers: [AppconfigService, D3Service, MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 <form class="test-form" #f="ngForm" (ngSubmit)="onSumbit()">
-  <md-input-container class="fullwidth example-margin">
+  <!--<md-input-container class="fullwidth example-margin">
     <input mdInput placeholder="Number of items to query" name="tbCountItems" [(ngModel)]="dataprovider.pageSize">
   </md-input-container>
 
@@ -14,6 +14,17 @@
   </md-slide-toggle>
   <div layout="row" layout-align="center center">
     <button md-raised-button color="primary" class="example-margin" type="submit" [disabled]="!f.form.valid">Update</button>
+  </div>-->
+  <md-input-container class="fullwidth example-margin">
+    <input mdInput placeholder="Number of items to query" name="tbCountItems">
+  </md-input-container>
+  <md-slide-toggle class="example-margin" ngControl="toggleRx" name="rx">
+    testtoggle
+  </md-slide-toggle>
+    <md-slide-toggle class="example-margin" ngControl="toggleRx2" name="rx2">
+    testtoggle
+  </md-slide-toggle>
+  <div layout="row" layout-align="center center">
+    <button md-raised-button color="primary" class="example-margin" type="submit" [disabled]="!f.form.valid">Update</button>
   </div>
-
 </form>
